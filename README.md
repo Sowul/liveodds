@@ -30,7 +30,7 @@ Returns full JSON for all UK/IRE races
 races = odds.all()
 
 for race in races:
-    print(races[race])
+	print(races[race])
 ```
 
 #### odds.race(race)
@@ -39,10 +39,10 @@ Returns JSON for given individual race
 race = odds.race('20:50')
 
 for runner in race:
-    print(runner["number"], runner["name"], runner["jockey"], runner["form"])
-    
-    for bookie in runner["odds"]:
-        print(bookie, runner["odds"][bookie]["price"])
+	print(runner["number"], runner["name"], runner["jockey"], runner["form"])
+	
+	for bookie in runner["odds"]:
+		print(bookie, runner["odds"][bookie]["price"])
 ```
 
 #### odds.meeting(meeting)
@@ -62,17 +62,17 @@ naas_races = odds.meeting('naas')
 Returns list of all meetings
 ```python
 for meeting in odds.list_meetings():
-    print(meeting)
+	print(meeting)
 ```
 
 #### odds.list_races(optional_meeting)
 Returns list of all race times, or all from an individual meeting
 ```python
 for time in odds.list_races():
-    for runner in odds.race(time):
-        print(runner["draw"])
-        
+	for runner in odds.race(time):
+		print(runner["draw"])
+		
 for meeting in odds.list_meetings():
-    for race_time in odds.list_races(meeting):
-        print(odds.race(race_time))
+	for race_time in odds.list_races(meeting):
+		print(odds.race(race_time))
 ```
