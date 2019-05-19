@@ -21,6 +21,8 @@ from liveodds import Odds
 
 odds = Odds()
 ```
+## Example JSON Data
+![alt text](https://i.postimg.cc/2jdNHH2z/Screenshot-2019-05-19-JSON-Editor-Online-view-edit-and-format.png)
 
 ## Methods
 
