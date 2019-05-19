@@ -1,2 +1,11 @@
-# liveodds
-API for live horse racing odds (UK/IRE)
+# odds
+
+## Requirements
+
+[Python3] is needed with lxml and requsts modules.
+
+```
+
+pip install lxml requests
+
+```
