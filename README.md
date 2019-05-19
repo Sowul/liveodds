@@ -15,18 +15,15 @@ $ git clone https://github.com/4A47/liveodds.git
 ```
 or download [here](https://github.com/4A47/liveodds/archive/master.zip)
 
-<pre>
 ## Usage
 ```python
 from liveodds import Odds
 
 odds = Odds()
 ```
-</pre>
 
 ## Methods
 
-<pre>
 #### odds.all()
 Returns full JSON for all UK/IRE races
 ```python
@@ -35,9 +32,7 @@ races = odds.all()
 for race in races:
     print(races[race])
 ```
-</pre>
 
-<pre>
 #### odds.race(race)
 Returns JSON for given individual race
 ```python
@@ -49,9 +44,7 @@ for runner in race:
     for bookie in runner["odds"]:
         print(bookie, runner["odds"][bookie]["price"])
 ```
-</pre>
 
-<pre>
 #### odds.meeting(meeting)
 Returns JSON for all races at a given meeting
 ```python
@@ -64,18 +57,14 @@ naas_races = odds.meeting('naas')
 			bookie = runner['best_odds']['bookie']
 			print(f'Best odds for {name} in the {race}: {best_odds} with {bookie}')
 ```
-</pre>
 
-<pre>
 #### odds.list_meetings()
 Returns list of all meetings
 ```python
 for meeting in odds.list_meetings():
     print(meeting)
 ```
-</pre>
 
-<pre>
 #### odds.list_races(optional_meeting)
 Returns list of all race times, or all from an individual meeting
 ```python
@@ -87,4 +76,3 @@ for meeting in odds.list_meetings():
     for race_time in odds.list_races(meeting):
         print(odds.race(race_time))
 ```
-</pre>
